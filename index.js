@@ -74,4 +74,3 @@ ulEl.innerHTML = listItems;
 
 
 
-
