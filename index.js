@@ -13,17 +13,27 @@ let con = document.getElementById("container")
 
 inputBtn.addEventListener("click", function(){
 myLeads.push(inputEl.value)
-console.log(myLeads)
-ulEl.textContent += myLeads[i]+" ";
-})
+inputEl.value = " "
+renderLeads();
+});
 
+function renderLeads(){
+let listItems = "";
 for (let i = 0; i < myLeads.length; i++){
-    console.log(myLeads[i]);
-    ulEl.innerHTML += "<li" + myLeads[i]+"</li>";
+   listItems += "<li>"+myLeads[i]+"</li>"
+
+}
+ulEl.innerHTML = listItems;
 
 }
 
-con.innerHTML += "<button>Click me</button>"
+// const btnText = "click me"
+// con.innerHTML += "<button id='butn' >"+btnText+"</button>"
+
+
+// document.getElementById("butn").addEventListener("click", function(){
+//     con.innerHTML += "<img style='display:block' src='./icon.png' >"
+// })
 
 
 
