@@ -33,7 +33,7 @@ renderLeads();
 
 function renderLeads(){
 
-   
+
 let listItems = "";
 for (let i = 0; i < myLeads.length; i++){
    listItems += `<li><a target="_blank" href ="${myLeads[i]}">${myLeads[i]}</a></li>`
@@ -49,7 +49,7 @@ delBtn.addEventListener("click", function(){
    renderLeads()
 
    if (myLeads.length <=0 && leadfromLocal === null){
-      ulEl.textContent = "No data to show, Add something in input and click save input button"
+      ulEl.textContent = "No data to show, Add something in input and click save input butto"
    }
 
 
