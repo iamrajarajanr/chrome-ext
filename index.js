@@ -26,12 +26,14 @@ myLeads.push(inputEl.value)
 
 localStorage.setItem("myLeads", JSON.stringify(myLeads))
 
-inputEl.value = " "
+inputEl.value = ""
 renderLeads();
 });
 
 
 function renderLeads(){
+
+   
 let listItems = "";
 for (let i = 0; i < myLeads.length; i++){
    listItems += `<li><a target="_blank" href ="${myLeads[i]}">${myLeads[i]}</a></li>`
