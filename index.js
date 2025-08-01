@@ -49,7 +49,7 @@ delBtn.addEventListener("click", function(){
    renderLeads()
 
    if (myLeads.length <=0 && leadfromLocal === null){
-      ulEl.textContent = "No data to show, Add something in input and click save input butto"
+      ulEl.textContent = "No data to show, Add something in input and click save input button"
    }
 
 
