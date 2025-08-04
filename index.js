@@ -15,38 +15,16 @@ console.log(leadfromLocal)
 
 if (leadfromLocal){
    myLeads = leadfromLocal
-   renderLeads()
+   render(myLeads)
 }else{
    ulEl.textContent = "No data to show, Add something in input and click save input button"
 }
 
 
-inputBtn.addEventListener("click", function(){
-myLeads.push(inputEl.value)
-
-localStorage.setItem("myLeads", JSON.stringify(myLeads))
-
-inputEl.value = ""
-renderLeads();
-});
-
-
-function renderLeads(){
-
-
-let listItems = "";
-for (let i = 0; i < myLeads.length; i++){
-   listItems += `<li><a target="_blank" href ="${myLeads[i]}">${myLeads[i]}</a></li>`
-
-}
-ulEl.innerHTML = listItems;
-
-}
-
 delBtn.addEventListener("click", function(){
    localStorage.clear();
    myLeads = []
-   renderLeads()
+   render(myLeads)
 
    if (myLeads.length <=0 && leadfromLocal === null){
       ulEl.textContent = "No data to show, Add something in input and click save input button"
@@ -54,3 +32,38 @@ delBtn.addEventListener("click", function(){
 
 
 })
+
+
+inputBtn.addEventListener("click", function(){
+
+   if (inputEl.value){
+      myLeads.push(inputEl.value);
+      localStorage.setItem("myLeads", JSON.stringify
+      (myLeads))
+      inputEl.value = "";
+      render(myLeads)
+   }else{
+   ulEl.textContent = "Type something in input box";
+
+   }
+
+});
+
+
+function render(leads){
+
+
+
+
+let listItems = "";
+for (let i = 0; i < leads.length; i++){
+   listItems += `<li><a target="_blank" href ="${leads[i]}">${leads[i]}</a></li>`
+
+}
+ulEl.innerHTML = listItems;
+
+}
+
+
+
+

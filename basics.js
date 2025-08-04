@@ -65,3 +65,39 @@
 // console.log(Boolean({}))
 // console.log(Boolean(["hello",123]))
 // console.log(Boolean(NaN))
+
+function sum(a,b){
+   return a+b;
+}
+
+
+function print(message){
+    console.log(`hi ${message} mike`)
+
+}
+
+let userData = ["John","Ben","Ram","Anita"]
+
+function looper(userArr){
+   let dataVar =""
+   for(let i = 0; i < userArr.length; i++){
+      dataVar += userArr[i] + "";
+   }
+
+   return dataVar
+}
+let userObj = {
+    name: "Mike",
+    age: "25",
+    job:"dev",
+    skill:"React",
+}
+
+function objPrint(obj){
+    console.log(
+        `The Empolyee name is ${obj.name} age is ${obj.age}, job is ${obj.job}. He is skilled in ${obj.skill}`
+    )
+
+}
+
+objPrint(userObj)
